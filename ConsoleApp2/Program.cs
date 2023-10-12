@@ -30,11 +30,15 @@ namespace ConsoleApp2
         //우선 now부터
         //now와 연결된 정점들을 하나씩 확인해서 아직 미발견 상태라면 방문한다
         bool[] visited = new bool[6];
-        
+        public void Daikstra()
+        {
+
+
+
+        }
 
         public void DFS(int now)
         {
-            Console.WriteLine(now);
             visited[now] = true;
             for(int i = 0; i < adj.GetLength(0); i++)
             {
@@ -48,6 +52,7 @@ namespace ConsoleApp2
         public void DFS2(int now)
         {
             Console.WriteLine(now);
+            visited[now] = true;
             visited[now] = true;
             for(int next = 0; next < adj2[now].Count; next++)
             {
@@ -94,15 +99,7 @@ namespace ConsoleApp2
             graph.BFS(0);
         }
     }
-    class PGraph
-    {
-        
-
-        public void DFS(int next)
-        {
-            
-        }
-    }
+    
 
     class Solution
     {
